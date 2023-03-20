@@ -1,5 +1,5 @@
-import { Button } from "./lib/button2/button";
-import { Input } from "./lib/input2/input";
+import { Button } from "./lib/button/button";
+import { Input } from "./lib/input/input";
 
 function App() {
   return (

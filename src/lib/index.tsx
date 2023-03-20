@@ -1,2 +1,2 @@
-import './button2/button'
-import './input2/Input'
+import './button/button'
+import './input/Input'
