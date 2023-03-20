@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button > label prop 1`] = `
+<div>
+  test
+</div>
+`;
+
+exports[`Button > renders correctly 1`] = `
+<div>
+  test
+</div>
+`;
+
+exports[`Button - Unit test > label prop 1`] = `
+<div>
+  test
+</div>
+`;
+
+exports[`Button - Unit test > renders correctly 1`] = `
+<div>
+  test
+</div>
+`;
