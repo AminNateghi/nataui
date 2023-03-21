@@ -1,20 +1,31 @@
 .button {
   outline-color: transparent;
-  background-color: #f4f4f5;
-  color: #000;
+  // background-color: #f4f4f5;
+  // color: #000;
   border-radius: 4px;
   transition: 0.3s;
-  
+
   // button size
+  // size-xs, size-sm, ...
   @include objectSize('xs', $xs-paddingX, $xs-fontSize, $xs-lineHeight, $xs-height, $xs-minWidth);
   @include objectSize('sm', $sm-paddingX, $sm-fontSize, $sm-lineHeight, $sm-height, $sm-minWidth);
   @include objectSize('md', $md-paddingX, $md-fontSize, $md-lineHeight, $md-height, $md-minWidth);
   @include objectSize('lg', $lg-paddingX, $lg-fontSize, $lg-lineHeight, $lg-height, $lg-minWidth);
   @include objectSize('xl', $xl-paddingX, $xl-fontSize, $xl-lineHeight, $xl-height, $xl-minWidth);
 
+  // button variant
+  // variant-outline, variant-simple, ...
   @include buttonVariant('outline', transparent, rgb(228, 228, 231), #000, false);
   @include buttonVariant('simple', #f4f4f5, transparent, #000, false);
   @include buttonVariant('solid', #f4f4f5, #d0d0d0, #000, false);
   @include buttonVariant('link', transparent, transparent, #000, true);
-  
+
+  // button box-shadow
+  // shadow-sm, shadow-md, ...
+  @include objectBoxShadow('xs');
+  @include objectBoxShadow('sm');
+  @include objectBoxShadow('md');
+  @include objectBoxShadow('lg');
+  @include objectBoxShadow('xl');
+  @include objectBoxShadow('inner');
 }

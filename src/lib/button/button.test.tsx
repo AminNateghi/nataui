@@ -24,6 +24,13 @@ describe("Button - Unit test", () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  test("shadow prop", () => {
+    const component = renderer.create(<Button shadow={"md"} />);
+    const tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });
 
 describe("Button - Integration test", () => {

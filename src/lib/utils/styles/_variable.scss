@@ -1,25 +1,40 @@
+@use "sass:map";
+
 $xs-paddingX: 0.75rem;
 $xs-fontSize: 0.75rem;
 $xs-lineHeight: 1rem;
 $xs-height: 1.75rem;
 $xs-minWidth: 1.75rem;
+
 $sm-paddingX: 1rem;
 $sm-fontSize: 0.875rem;
 $sm-lineHeight: 1.25rem;
 $sm-height: 2rem;
 $sm-minWidth: 2rem;
+
 $md-paddingX: 1rem;
 $md-fontSize: 0.875rem;
 $md-lineHeight: 1.25rem;
 $md-height: 2.25rem;
 $md-minWidth: 2.25rem;
+
 $lg-paddingX: 1rem;
 $lg-fontSize: 1rem;
 $lg-lineHeight: 1.5rem;
 $lg-height: 2.75rem;
 $lg-minWidth: 2.75rem;
+
 $xl-paddingX: 1.5rem;
 $xl-fontSize: 1.125rem;
 $xl-lineHeight: 1.75rem;
 $xl-height: 3.125rem;
 $xl-minWidth: 3.125rem;
+
+$shadow: (
+  "xs": (0 1px 2px 0 rgb(0 0 0 / 0.05)),
+  "sm": (0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)),
+  "md": (0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)),
+  "lg": (0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)),
+  "xl": (0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)),
+  "inner": (inset 0 2px 4px 0 rgb(0 0 0 / 0.05)),
+);

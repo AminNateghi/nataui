@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @mixin objectSize($size, $paddingX, $fontSize, $lineHeight, $height, $minWidth) {
   &.size-#{$size} {
     padding-left: $paddingX;
@@ -6,6 +8,12 @@
     line-height: $lineHeight;
     height: $height;
     min-width: $minWidth;
+  }
+}
+
+@mixin objectBoxShadow($size) {
+  &.shadow-#{$size} {
+    box-shadow: map.get($shadow, $size)
   }
 }
 
@@ -22,7 +30,7 @@
     }
 
     &:hover {
-      background-color: darken($backgroundColor,10%);
+      background-color: darken($backgroundColor, 10%);
     }
   }
 }
