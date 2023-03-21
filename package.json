@@ -1,12 +1,14 @@
 {
-  "name": "manataui",
+  "name": "@manataui/react",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "description": "React UI component libraries",
   "license": "MIT",
   "author": "Amin Nateghi",
-  "keywords": ["React UI component"],
+  "keywords": [
+    "React UI component"
+  ],
   "files": [
     "dist",
     "README.md"
@@ -49,6 +51,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:watch": "tsc && vite build -w",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
@@ -64,6 +67,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
+    "sass": "^1.59.3",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
     "vitest": "^0.29.4"

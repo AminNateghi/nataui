@@ -1,0 +1,10 @@
+@mixin objectSize($size, $paddingX, $fontSize, $lineHeight, $height, $minWidth) {
+  &.size-#{$size} {
+    padding-left: $paddingX;
+    padding-right: $paddingX;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    height: $height;
+    min-width: $minWidth;
+  }
+}

@@ -1,0 +1,13 @@
+.button {
+  outline-color: transparent;
+  background-color: red;
+  color: #fff;
+  border-radius: 4px;
+
+  // button size
+  @include objectSize('xs', $xs-paddingX, $xs-fontSize, $xs-lineHeight, $xs-height, $xs-minWidth);
+  @include objectSize('sm', $sm-paddingX, $sm-fontSize, $sm-lineHeight, $sm-height, $sm-minWidth);
+  @include objectSize('md', $md-paddingX, $md-fontSize, $md-lineHeight, $md-height, $md-minWidth);
+  @include objectSize('lg', $lg-paddingX, $lg-fontSize, $lg-lineHeight, $lg-height, $lg-minWidth);
+  @include objectSize('xl', $xl-paddingX, $xl-fontSize, $xl-lineHeight, $xl-height, $xl-minWidth);
+}
