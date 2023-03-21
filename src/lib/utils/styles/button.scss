@@ -3,7 +3,8 @@
   background-color: #f4f4f5;
   color: #000;
   border-radius: 4px;
-
+  transition: 0.3s;
+  
   // button size
   @include objectSize('xs', $xs-paddingX, $xs-fontSize, $xs-lineHeight, $xs-height, $xs-minWidth);
   @include objectSize('sm', $sm-paddingX, $sm-fontSize, $sm-lineHeight, $sm-height, $sm-minWidth);
@@ -15,5 +16,5 @@
   @include buttonVariant('simple', #f4f4f5, transparent, #000, false);
   @include buttonVariant('solid', #f4f4f5, #d0d0d0, #000, false);
   @include buttonVariant('link', transparent, transparent, #000, true);
-
+  
 }

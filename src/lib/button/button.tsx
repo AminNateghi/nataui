@@ -12,6 +12,10 @@ export const Button = ({
   size = "md",
   children,
 }: Props & PropsWithChildren) => {
-  const classNames = joinClassName("button", `size-${size}`, `variant-${variant}`);
+  const classNames = joinClassName(
+    "button",
+    `size-${size}`,
+    `variant-${variant}`,
+  );
   return <button className={classNames}>{children}</button>;
 };
