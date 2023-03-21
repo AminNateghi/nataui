@@ -8,3 +8,17 @@
     min-width: $minWidth;
   }
 }
+
+@mixin buttonVariant($type, $backgroundColor, $borderColor, $color, $hover) {
+  &.variant-#{$type} {
+    background-color: $backgroundColor;
+    border: 1px solid $borderColor;
+    color: $color;
+
+    @if $hover {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

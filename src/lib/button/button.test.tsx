@@ -17,6 +17,13 @@ describe("Button - Unit test", () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  test("variant prop", () => {
+    const component = renderer.create(<Button variant={"solid"} />);
+    const tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });
 
 describe("Button - Integration test", () => {
