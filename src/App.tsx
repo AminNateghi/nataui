@@ -31,6 +31,7 @@ function App() {
         <Button variant={'simple'}>simple</Button>
         <Button variant={'clean'}>clean</Button>
         <Button variant={'link'}>link</Button>
+        <Button disabled>disabled</Button>
       </div>
       <div
         style={{

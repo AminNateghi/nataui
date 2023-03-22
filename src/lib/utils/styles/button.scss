@@ -5,6 +5,13 @@
   border-radius: 4px;
   transition: 0.3s;
 
+  &:disabled {
+    color: #868686;
+    background-color: #dadada !important;
+    border: 1px solid transparent !important;
+    cursor: not-allowed;
+  }
+
   // button size
   // size-xs, size-sm, ...
   @include objectSize('xs', $xs-paddingX, $xs-fontSize, $xs-lineHeight, $xs-height, $xs-minWidth);
@@ -36,4 +43,5 @@
   @include objectBackgroundColor('warning');
   @include objectBackgroundColor('danger');
   @include objectBackgroundColor('clean');
+
 }

@@ -25,10 +25,15 @@
 
 @mixin objectBackgroundColor($colorName) {
   $bgColor: map.get($color, $colorName);
-
+  
   &.background-color-#{$colorName} {
     background-color: $bgColor;
     border: 0px solid darken($bgColor, 15%);
+    color: lighten($bgColor, 80%);
+    
+    @if $colorName == 'clean'{
+      color: darken($bgColor, 80%);
+    }
 
     &:hover {
       background-color: darken($bgColor, 10%);
