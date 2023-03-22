@@ -1,7 +1,7 @@
 {
-  "name": "@manataui/react",
-  "private": true,
+  "name": "@nataui/react",
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "description": "React UI component libraries",
   "license": "MIT",
@@ -13,12 +13,12 @@
     "dist",
     "README.md"
   ],
-  "main": "./dist/manataui.umd.js",
-  "module": "./dist/manataui.es.js",
+  "main": "./dist/nataui.umd.js",
+  "module": "./dist/nataui.es.js",
   "exports": {
     ".": {
-      "import": "./dist/manataui.es.js",
-      "require": "./dist/manataui.umd.js"
+      "import": "./dist/nataui.es.js",
+      "require": "./dist/nataui.umd.js"
     }
   },
   "browserslist": {

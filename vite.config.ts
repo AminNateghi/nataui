@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/lib/index.tsx"),
       name: "Manata UI",
-      fileName: (format) => `manataui.${format}.js`,
+      fileName: (format) => `nataui.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
