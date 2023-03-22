@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/lib/index.tsx"),
-      name: "Manata UI",
+      name: "Nata UI",
       fileName: (format) => `nataui.${format}.js`,
     },
     rollupOptions: {
