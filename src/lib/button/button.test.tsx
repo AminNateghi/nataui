@@ -45,15 +45,39 @@ describe('Button - Unit test', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  test('onClick prop', () => {
+    const component = renderer.create(<Button onClick={()=>{}} />);
+    const tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });
 
 describe('Button - Integration test', () => {
   afterEach(cleanup);
 
-  test('Expected label is displayed', () => {
+  test('label', () => {
     const label = 'Hello, button';
     render(<Button>{label}</Button>);
     expect(screen.getByText(label));
   });
- 
+
+  test('disabled', () => {
+    const label = 'btn';
+    render(<Button disabled>{label}</Button>);
+    const btn = screen.getByText(label);
+    expect(btn).toHaveProperty('disabled', true);
+  });
+  
+  test('onClick', () => {
+    const host = document.createElement('div');
+    document.body.appendChild(host);
+    const label = 'btn';
+    render(<Button onClick={()=>{host.append('button clicked')}}>{label}</Button>);
+    const btn = screen.getByText(label);
+    btn.click();
+    expect(host.innerHTML).toContain('button clicked');
+  });
+
 });
