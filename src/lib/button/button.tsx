@@ -8,6 +8,7 @@ interface Props {
   shadow?: ShadowType;
   color?: ColorType;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 export const Button = ({
@@ -16,18 +17,20 @@ export const Button = ({
   shadow,
   color,
   disabled = false,
+  onClick,
   children,
 }: Props & PropsWithChildren) => {
   const classNames = joinClassName(
     'button',
     `size-${size}`,
     shadow ? `shadow-${shadow}` : '',
-    color ? `background-color-${color}` : `variant-${variant}`,
+    color ? `background-color-${color}` : `variant-${variant}`
   );
   return (
     <button
       className={classNames}
       disabled={disabled}
+      onClick={onClick}
     >
       {children}
     </button>

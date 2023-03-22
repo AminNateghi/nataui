@@ -1,5 +1,5 @@
 import { Button } from './lib/button/button';
-import './App.scss';
+import './../dist/style.css';
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
           marginBottom: '1rem',
         }}
       >
-        <Button variant={'outline'}>outline</Button>
+        <Button variant={'outline'} onClick={()=> console.log('button clicked!')}>outline</Button>
         <Button variant={'solid'}>solid</Button>
         <Button variant={'simple'}>simple</Button>
         <Button variant={'clean'}>clean</Button>
