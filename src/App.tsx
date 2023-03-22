@@ -10,6 +10,7 @@ function App() {
           flexWrap: 'wrap',
           gap: '1rem',
           marginBottom: '1rem',
+          alignItems: 'center',
         }}
       >
         <Button size={'xs'}>xs</Button>
