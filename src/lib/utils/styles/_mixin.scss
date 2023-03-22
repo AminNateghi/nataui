@@ -1,4 +1,4 @@
-@use "sass:map";
+@use 'sass:map';
 
 @mixin objectSize($size, $paddingX, $fontSize, $lineHeight, $height, $minWidth) {
   &.size-#{$size} {
@@ -13,24 +13,76 @@
 
 @mixin objectBoxShadow($size) {
   &.shadow-#{$size} {
-    box-shadow: map.get($shadow, $size)
+    box-shadow: map.get($shadow, $size);
   }
 }
 
-@mixin buttonVariant($type, $backgroundColor, $borderColor, $color, $hover) {
-  &.variant-#{$type} {
-    background-color: $backgroundColor;
-    border: 1px solid $borderColor;
-    color: $color;
+@mixin objectColor($colorName) {
+  &.color-#{$colorName} {
+    color: map.get($color, $colorName);
+  }
+}
 
-    @if $type =='link' {
+@mixin objectBackgroundColor($colorName) {
+  $bgColor: map.get($color, $colorName);
+
+  &.background-color-#{$colorName} {
+    background-color: $bgColor;
+    border: 0px solid darken($bgColor, 15%);
+
+    &:hover {
+      background-color: darken($bgColor, 10%);
+    }
+  }
+}
+
+@mixin createTextColor($colorName) {
+  $bgColor: map.get($color, $colorName);
+  color: $color;
+}
+
+@mixin createBackgroundColor($type) {
+  $bgColor: map.get($variantBackgroundColor, $type);
+  background-color: $bgColor;
+}
+
+@mixin createBorderColor($type) {
+  $bgColor: map.get($variantBackgroundColor, $type);
+  @if $type == 'outline' {
+    border: 1px solid darken($bgColor, 15%);
+  }
+  @if $type == 'solid' {
+    border: 1px solid darken($bgColor, 15%);
+  }
+  @if $type == 'simple' {
+    border: 1px solid transparent;
+  }
+  @if $type == 'clean' {
+    border: 1px solid transparent;
+  }
+  @if $type == 'link' {
+    border: 1px solid transparent;
+  }
+}
+
+@mixin createHover($colorName) {
+  $bgColor: map.get($color, $colorName);
+
+  &:hover {
+    background-color: darken($bgColor, 10%);
+  }
+}
+
+@mixin buttonVariant($type, $colorName) {
+  &.variant-#{$type} {
+    @include createBackgroundColor($type);
+    @include createBorderColor($type);
+    @include createHover($colorName);
+
+    @if $type == 'link' {
       &:hover {
         text-decoration: underline;
       }
-    }
-
-    &:hover {
-      background-color: darken($backgroundColor, 10%);
     }
   }
 }

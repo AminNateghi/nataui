@@ -1,4 +1,4 @@
-@use "sass:map";
+@use 'sass:map';
 
 $xs-paddingX: 0.75rem;
 $xs-fontSize: 0.75rem;
@@ -31,10 +31,44 @@ $xl-height: 3.125rem;
 $xl-minWidth: 3.125rem;
 
 $shadow: (
-  "xs": (0 1px 2px 0 rgb(0 0 0 / 0.05)),
-  "sm": (0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)),
-  "md": (0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)),
-  "lg": (0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)),
-  "xl": (0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)),
-  "inner": (inset 0 2px 4px 0 rgb(0 0 0 / 0.05)),
+  'xs': (
+    0 1px 2px 0 rgb(0 0 0 / 0.05),
+  ),
+  'sm': (
+    0 1px 3px 0 rgb(0 0 0 / 0.1),
+    0 1px 2px -1px rgb(0 0 0 / 0.1),
+  ),
+  'md': (
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1),
+  ),
+  'lg': (
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1),
+  ),
+  'xl': (
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1),
+  ),
+  'inner': (
+    inset 0 2px 4px 0 rgb(0 0 0 / 0.05),
+  ),
+);
+
+$variantBackgroundColor: (
+  'outline': #ffffff,
+  'solid': #f4f4f5,
+  'simple': #f4f4f5,
+  'clean': #ffffff,
+  'link': rgba(255, 255, 255, 0),
+);
+
+$color: (
+  'primary': #94a3b8,
+  'success': #22c55e,
+  'info': #06b6d4,
+  'warning': #f97316,
+  'danger': #e11d48,
+  'clean': #ffffff,
+  'transparent': rgba(255, 255, 255, 0),
 );

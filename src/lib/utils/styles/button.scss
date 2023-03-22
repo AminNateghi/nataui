@@ -15,10 +15,11 @@
 
   // button variant
   // variant-outline, variant-simple, ...
-  @include buttonVariant('outline', transparent, rgb(228, 228, 231), #000, false);
-  @include buttonVariant('simple', #f4f4f5, transparent, #000, false);
-  @include buttonVariant('solid', #f4f4f5, #d0d0d0, #000, false);
-  @include buttonVariant('link', transparent, transparent, #000, true);
+  @include buttonVariant('outline', 'clean');
+  @include buttonVariant('simple', 'clean');
+  @include buttonVariant('solid', 'clean');
+  @include buttonVariant('clean', 'clean');
+  @include buttonVariant('link', 'transparent');
 
   // button box-shadow
   // shadow-sm, shadow-md, ...
@@ -28,4 +29,11 @@
   @include objectBoxShadow('lg');
   @include objectBoxShadow('xl');
   @include objectBoxShadow('inner');
+
+  @include objectBackgroundColor('primary');
+  @include objectBackgroundColor('success');
+  @include objectBackgroundColor('info');
+  @include objectBackgroundColor('warning');
+  @include objectBackgroundColor('danger');
+  @include objectBackgroundColor('clean');
 }
