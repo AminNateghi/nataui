@@ -1,6 +1,10 @@
 {
   "name": "@nataui/react",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AminNateghi/nataui.git"
+  },
   "type": "module",
   "description": "React UI component libraries",
   "license": "MIT",
@@ -12,6 +16,7 @@
     "dist",
     "README.md"
   ],
+  "types": "dist/index.d.ts",
   "main": "./dist/nataui.umd.js",
   "module": "./dist/nataui.es.js",
   "exports": {
@@ -47,6 +52,12 @@
       "sourceType": "module"
     }
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "bugs": {
+    "url": "https://github.com/AminNateghi/nataui/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -66,9 +77,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
-    "sass": "^1.59.3",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
     "vitest": "^0.29.4"
+  },
+  "dependencies": {
+    "sass": "^1.60.0"
   }
 }

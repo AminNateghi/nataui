@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import { afterEach, describe, expect, test } from 'vitest';
 import { render, screen, cleanup } from '@testing-library/react';
-import { Button } from './button';
+import { Button } from '../button';
 
 describe('Button - Unit test', () => {
   test('renders correctly', () => {
@@ -47,7 +47,7 @@ describe('Button - Unit test', () => {
   });
 
   test('onClick prop', () => {
-    const component = renderer.create(<Button onClick={()=>{}} />);
+    const component = renderer.create(<Button onClick={() => {}} />);
     const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -69,15 +69,22 @@ describe('Button - Integration test', () => {
     const btn = screen.getByText(label);
     expect(btn).toHaveProperty('disabled', true);
   });
-  
+
   test('onClick', () => {
     const host = document.createElement('div');
     document.body.appendChild(host);
     const label = 'btn';
-    render(<Button onClick={()=>{host.append('button clicked')}}>{label}</Button>);
+    render(
+      <Button
+        onClick={() => {
+          host.append('button clicked');
+        }}
+      >
+        {label}
+      </Button>
+    );
     const btn = screen.getByText(label);
     btn.click();
     expect(host.innerHTML).toContain('button clicked');
   });
-
 });

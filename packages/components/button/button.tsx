@@ -1,5 +1,5 @@
-import { ColorType, ShadowType, SizeType, VariantType } from '../utils/global-types';
-import { joinClassName } from '../utils/global-function';
+import { ColorType, ShadowType, SizeType, VariantType } from '../../utilities/global-types';
+import { joinClassName } from '../../utilities/global-function';
 import { PropsWithChildren } from 'react';
 
 interface Props {
