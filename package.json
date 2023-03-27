@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AminNateghi/nataui.git"
+    "url": "https://github.com/AminNateghi/nataui.git"
   },
   "type": "module",
   "description": "React UI component libraries",
