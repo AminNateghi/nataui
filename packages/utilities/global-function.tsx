@@ -1,4 +1,4 @@
-// let result = joinClassName(str, obj, arr, 'test class')
+// example: let result = joinClassName(str, obj, arr, 'test class')
 export function joinClassName(...args: any[]): string {
   let template = "";
   args.forEach((arg) => {
