@@ -1,19 +1,19 @@
-import path from "path";
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import path from 'path';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "packages/index.ts"),
-      name: "Nata UI",
-      fileName: (format) => `nataui.${format}.js`,
+      entry: path.resolve(__dirname, 'packages/index.ts'),
+      name: 'Nata UI',
+      fileName: format => `nataui.${format}.js`,
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ['react', 'react-dom'],
       output: {
         globals: {
-          react: "React",
+          react: 'React',
         },
       },
     },
