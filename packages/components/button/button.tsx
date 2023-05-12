@@ -12,7 +12,7 @@ interface Props {
   onClick?: () => void;
 }
 
-const Button = ({
+export const Button = ({
   variant = 'outline',
   size = 'md',
   shadow,
@@ -38,4 +38,3 @@ const Button = ({
   );
 };
 
-export default Button;

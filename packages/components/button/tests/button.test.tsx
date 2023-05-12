@@ -1,5 +1,5 @@
+import React from 'react';
 import renderer from 'react-test-renderer';
-import { afterEach, describe, expect, test } from 'vitest';
 import { render, screen, cleanup } from '@testing-library/react';
 import { Button } from '../button';
 
