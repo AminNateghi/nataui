@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@nataui/react':
-    specifier: ^0.1.0
-    version: 0.1.0
+    specifier: link:./../dist/
+    version: link:../dist
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -561,10 +561,6 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
-
-  /@nataui/react@0.1.0:
-    resolution: {integrity: sha512-GUYt/nN2lXGw3HuHoRJytDMiqKR9jXhdvQ1FA6u0fWigmUH96lS3BIxDlKCmR5i3cKQq+kDbfyalTIRte4uubA==}
-    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
