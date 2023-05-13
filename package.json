@@ -59,7 +59,9 @@
     "url": "https://github.com/AminNateghi/nataui/issues"
   },
   "scripts": {
-    "build": "rollup -c",
+    "clean:output": "rimraf dist",
+    "rollup:run": "rollup -c",
+    "build": "npm run clean:output && npm run rollup:run",
     "dev": "ladle serve --port 4123",
     "test": "vitest"
   },
@@ -76,6 +78,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
+    "rimraf": "^5.0.0",
     "rollup": "^3.21.6",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-postcss": "^4.0.2",
