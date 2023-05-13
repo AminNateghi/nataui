@@ -12,10 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install pnpm
+      - name: Install PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
 
       - name: Install Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -25,13 +25,13 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@nataui'
               
-      - name: Install dependencies
+      - name: Install Dependencies
         run: pnpm install
 
-      - name: Build application
+      - name: Build Application
         run: pnpm build
       
-      - name: Run tests
+      - name: Run Tests
         run: pnpm test
 
       - name: Publish to npmjs
