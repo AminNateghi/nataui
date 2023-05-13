@@ -1,6 +1,6 @@
-import React from 'react';
 import renderer from 'react-test-renderer';
 import { render, screen, cleanup } from '@testing-library/react';
+import { afterEach, describe, expect, test } from 'vitest';
 import { Button } from '../button';
 
 describe('Button - Unit test', () => {
