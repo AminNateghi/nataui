@@ -8,7 +8,6 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
     "strict": true,
     "skipLibCheck": true,
     "jsx": "react-jsx",
@@ -19,23 +18,6 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true,
-    "useDefineForClassFields": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
-    "allowJs": false,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-  },
-  "include": [
-    "src",
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+    "emitDeclarationOnly": true
+  }
 }

@@ -23,10 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# package managers lock file
-pnpm-lock.yaml
-yarn.lock
-package-lock.json
-
 # npm local config
 .npmrc

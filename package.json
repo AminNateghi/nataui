@@ -1,6 +1,6 @@
 {
   "name": "@nataui/react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/AminNateghi/nataui.git"
@@ -16,13 +16,13 @@
     "dist",
     "README.md"
   ],
-  "types": "dist/index.d.ts",
-  "main": "./dist/nataui.umd.js",
-  "module": "./dist/nataui.es.js",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
   "exports": {
     ".": {
-      "import": "./dist/nataui.es.js",
-      "require": "./dist/nataui.umd.js"
+      "import": "./dist/cjs/index.js",
+      "require": "./dist/esm/index.js"
     }
   },
   "browserslist": {
@@ -59,29 +59,30 @@
     "url": "https://github.com/AminNateghi/nataui/issues"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "build:watch": "tsc && vite build -w",
-    "preview": "vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "clean:output": "rimraf dist",
+    "rollup:run": "rollup -c",
+    "build": "npm run clean:output && npm run rollup:run",
+    "dev": "ladle serve --port 4123"
   },
   "devDependencies": {
-    "@testing-library/dom": "^9.0.1",
+    "@ladle/react": "^2.12.3",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.1",
     "@testing-library/react": "^14.0.0",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
+    "@types/jest": "^29.5.1",
+    "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
-    "@vitejs/plugin-react": "^3.1.0",
-    "jsdom": "^21.1.1",
+    "jest": "^29.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.2.0",
-    "vitest": "^0.29.4"
-  },
-  "dependencies": {
-    "sass": "^1.60.0"
+    "rimraf": "^5.0.0",
+    "rollup": "^3.21.6",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.62.1",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
   }
 }

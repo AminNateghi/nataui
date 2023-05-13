@@ -1,2 +1,2 @@
-export * from './components/index'; 
+export * from './components'; 
 import './utilities/styles/_main.scss';
