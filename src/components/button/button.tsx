@@ -1,4 +1,3 @@
-import React from 'react';
 import { ColorType, ShadowType, SizeType, VariantType } from '../../utilities/global-types';
 import { joinClassName } from '../../utilities/global-function';
 import { PropsWithChildren } from 'react';
